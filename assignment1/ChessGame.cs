@@ -18,38 +18,6 @@ namespace assignment1
             }
         }
 
-        public static void DisplayChessboard(ChessPiece[,] chessboard)
-        {
-            string square = " ";
-            int colCounter = chessboard.GetLength(1);
-
-            for (int row = 0; row < chessboard.GetLength(0); row++)
-            {
-                for (int col = 0; col < chessboard.GetLength(1) + 1; col++)
-                {
-                    int evenUneven = (row + col + 1) % 2;
-                    if (col == 0)
-                    {
-                        Console.Write($"{colCounter} ");
-                        colCounter--;
-                    }
-                    else if (evenUneven == 0)
-                    {
-                        Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.Write($"{square,3}");
-                    }
-                    else
-                    {
-                        Console.BackgroundColor = ConsoleColor.DarkYellow;
-                        Console.Write($"{square,3}");
-                    }
-                    Console.ResetColor();
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine("   a  b  c  d  e  f  g  h");
-        }
-
         public static void PutChessPieces(ChessPiece[,] chessboard)
         {
             ChessPieceType[] order =
