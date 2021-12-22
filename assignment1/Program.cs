@@ -13,8 +13,8 @@ namespace assignment1
         {
             ChessPiece[,] chessboard = new ChessPiece[8, 8];
             ChessGame chessGame = new ChessGame();
-            //ChessGame.InitChessboard(chessboard);
-            //ChessGame.DisplayChessboard(chessboard);
+            ChessGame.InitChessboard(chessboard);
+            ChessGame.DisplayChessboard(chessboard);
         }
     }
 }
