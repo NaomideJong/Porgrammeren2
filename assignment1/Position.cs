@@ -11,7 +11,7 @@ namespace assignment1
         public int row;
         public int column;
 
-        Position String2Position(string pos)
+        public Position String2Position(string pos)
         {
             int column = pos[0] - 'a';
             int row = 8 - int.Parse(pos[1].ToString());

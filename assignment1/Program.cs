@@ -15,18 +15,23 @@ namespace assignment1
             ChessGame chessGame = new ChessGame();
             chessGame.InitChessboard(chessboard);
             DisplayChessboard(chessboard);
+            PlayChess(chessboard);
+            Console.ReadKey();
         }
 
         void PlayChess(ChessPiece[,] chessboard)
         {
+            string[] moves;
             do
             {
+                Position position = new Position();
                 Console.WriteLine("Enter move (e.g. a2 a3): ");
-                Console.ReadLine();
-                input.Split(' ');
-
+                moves = Console.ReadLine().Split(' ');
+                position.String2Position(moves[0]);
+                position.String2Position(moves[1]);
+                Console.WriteLine($"move from {moves[0]} to {moves[1]}");
             }
-            while ( != "stop");
+            while (moves[0] != "stop");
         }
 
         void DisplayChessboard(ChessPiece[,] chessboard)
