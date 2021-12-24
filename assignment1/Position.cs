@@ -25,6 +25,7 @@ namespace assignment1
             else
             {
                 throw new Exception($"invalid position {pos}");
+
             }
         }
     }
